@@ -6,10 +6,14 @@
       </svg>
       <h1 class="header-title animate-pop-in">欢迎来到SS女人咖啡馆</h1>
       <h3 class="header-subtitle animate-pop-in">轻奢 优雅 宁静 从容</h3>
-      <v-btn color="info" class=" animate-pop-in header-button">Get started today</v-btn>
+			<nuxt-link to="/inspire">
+				<v-btn color="info" class=" animate-pop-in header-button">Get started today</v-btn>
+			</nuxt-link>
     </section>
     <section class="header-down-arrow">
-      <img :src="arrow" width="100" ref="bg" v-loadimg="showAnimation">
+			<nuxt-link to="/inspire">
+				<img :src="arrow" width="100" ref="bg" v-loadimg="showAnimation">
+			</nuxt-link>
     </section>
   </header>
 </template>
@@ -54,6 +58,10 @@
   .js-loaded header:before {
     animation: none;
   }
+
+	a {
+		text-decoration:none;
+	}
 
 
   header {

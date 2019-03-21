@@ -16,6 +16,10 @@
 
 <script>
 export default {
+	transition: {
+		name: 'page',
+		model: 'out-in',
+	},
   data() {
     return {
       clipped: false,
