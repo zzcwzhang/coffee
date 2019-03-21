@@ -16,7 +16,7 @@ module.exports = {
     ],
 		script: [
 			{
-				src: "//at.alicdn.com/t/font_1100487_51k6fxo8g5f.js",
+				src: "//at.alicdn.com/t/font_1100487_phccyp7yw0s.js",
 			}
 		],
     link: [
