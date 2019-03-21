@@ -20,7 +20,8 @@
         </v-flex>
       </v-layout>
       <v-list>
-        <v-list-tile v-for="(item, i) in items" :key="i" :to="item.to" router exact>
+        <!-- <v-list-tile v-for="(item, i) in items" :key="i" :to="item.to" router exact> -->
+        <v-list-tile v-for="(item, i) in items" :key="i" router exact>
           <v-list-tile-action>
 						<svg class="icon" aria-hidden="true" style="font-size: 30px">
 							<use :xlink:href="`#${item.icon}`"></use>
