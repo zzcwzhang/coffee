@@ -34,7 +34,7 @@
 				},
 				set(val) {
 					this.$emit('update:drawer', val);
-				},
+				}
 			}
 		},
 		data() {

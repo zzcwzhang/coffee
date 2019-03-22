@@ -7,8 +7,8 @@
       <</my-nav> <!-- 内容区域 -->
         <v-container>
           <v-layout wrap row>
-            <v-flex text-xs-center sx12 sm6 v-for="item in items">
-              <v-card class="ma-2">
+            <v-flex text-xs-center sx12 sm6 v-for="item in items" :key="item.headlineText">
+              <v-card class="ma-2" :height="580">
                 <v-img class="py-4" :src="item.image" aspect-ratio="1"></v-img>
                 <v-card-title primary-title>
                   <div>
@@ -40,20 +40,31 @@
       myNav,
       myToolbar,
     },
+    asyncData(context) {
+      return context.app.$storyapi.get('cdn/stories', {
+        version: 'draft',
+        starts_with: 'coffee/'
+
+      }).then(res => {
+        return {
+          items: res.data.stories.map(bp => {
+            return {
+              id: bp.slug,
+              headlineText: bp.content.title,
+              mainText: bp.content.content,
+              image: bp.content.thumbnail,
+            }
+          }),
+        }
+      })
+    },
+    mounted() {
+      /* const api = this.$storyapi; */
+      /* console.log({ api }) */
+    },
     data() {
       return {
         drawer: false, // 是否打开侧部菜单
-        items: [{
-            image: testImg,
-            headlineText: '女人花边伞',
-            mainText: '中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国',
-          },
-          {
-            image: testImg,
-            headlineText: '女人花边伞',
-            mainText: '中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国中华人民共和国',
-          }
-        ]
       }
     }
   }

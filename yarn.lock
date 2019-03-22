@@ -1535,6 +1535,13 @@ axios-retry@^3.1.2:
   dependencies:
     is-retry-allowed "^1.1.0"
 
+axios@^0.17.1:
+  version "0.17.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.17.1.tgz#2d8e3e5d0bdbd7327f91bc814f5c57660f81824d"
+  dependencies:
+    follow-redirects "^1.2.5"
+    is-buffer "^1.1.5"
+
 axios@^0.18.0:
   version "0.18.0"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.18.0.tgz#32d53e4851efdc0a11993b6cd000789d70c05102"
@@ -3083,7 +3090,7 @@ flush-write-stream@^1.0.0:
     inherits "^2.0.3"
     readable-stream "^2.3.6"
 
-follow-redirects@^1.0.0, follow-redirects@^1.3.0:
+follow-redirects@^1.0.0, follow-redirects@^1.2.5, follow-redirects@^1.3.0:
   version "1.7.0"
   resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.7.0.tgz#489ebc198dc0e7f64167bd23b03c4c19b5784c76"
   dependencies:
@@ -5604,6 +5611,10 @@ qs@6.5.2, qs@~6.5.2:
   version "6.5.2"
   resolved "https://registry.yarnpkg.com/qs/-/qs-6.5.2.tgz#cb3ae806e8740444584ef154ce8ee98d403f3e36"
 
+qs@^6.5.2:
+  version "6.6.0"
+  resolved "https://registry.yarnpkg.com/qs/-/qs-6.6.0.tgz#a99c0f69a8d26bf7ef012f871cdabb0aee4424c2"
+
 querystring-es3@^0.2.0:
   version "0.2.1"
   resolved "https://registry.yarnpkg.com/querystring-es3/-/querystring-es3-0.2.1.tgz#9ec61f79049875707d69414596fd907a4d711e73"
@@ -6148,6 +6159,25 @@ std-env@^2.2.1:
   dependencies:
     ci-info "^1.6.0"
 
+storyblok-js-client@^1.0.12:
+  version "1.0.21"
+  resolved "https://registry.yarnpkg.com/storyblok-js-client/-/storyblok-js-client-1.0.21.tgz#9333d37dd729d7726bd5e663000cc4af031e4fd4"
+  dependencies:
+    axios "^0.17.1"
+    qs "^6.5.2"
+    throttle-promise "^1.0.4"
+
+storyblok-nuxt@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/storyblok-nuxt/-/storyblok-nuxt-1.0.1.tgz#0e4ccc64a54cfa76b79d73b87b237443db79d71b"
+  dependencies:
+    storyblok-js-client "^1.0.12"
+    storyblok-vue "^1.0.4"
+
+storyblok-vue@^1.0.4:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/storyblok-vue/-/storyblok-vue-1.0.5.tgz#c9a82cc5be45c9c5af7d48477e69e207d60b5f38"
+
 stream-browserify@^2.0.1:
   version "2.0.2"
   resolved "https://registry.yarnpkg.com/stream-browserify/-/stream-browserify-2.0.2.tgz#87521d38a44aa7ee91ce1cd2a47df0cb49dd660b"
@@ -6394,6 +6424,10 @@ thread-loader@^1.2.0:
     async "^2.3.0"
     loader-runner "^2.3.0"
     loader-utils "^1.1.0"
+
+throttle-promise@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/throttle-promise/-/throttle-promise-1.0.4.tgz#ce7f618ab19885a2c78d793f71068e2b79831716"
 
 through2@^2.0.0:
   version "2.0.5"

@@ -16,6 +16,7 @@
     "cross-env": "^5.2.0",
     "koa": "^2.6.2",
     "nuxt": "^2.4.0",
+    "storyblok-nuxt": "^1.0.1",
     "vuetify": "^1.5.5",
     "vuetify-loader": "^1.2.1"
   },
