@@ -1,5 +1,5 @@
 <template>
-  <v-navigation-drawer v-model="drawer" :mini-variant="miniVariant" :clipped="clipped" fixed app>
+  <v-navigation-drawer v-model="cdrawer" :mini-variant="miniVariant" :clipped="clipped" fixed app>
     <v-layout column align-center>
       <v-flex class="mt-5">
         <svg class="icon gradientText" aria-hidden="true">
@@ -27,6 +27,16 @@
   export default {
     name: '',
 		props: ['drawer'],
+		computed: {
+			cdrawer: {
+				get() {
+					return this.drawer;
+				},
+				set(val) {
+					this.$emit('update:drawer', val);
+				},
+			}
+		},
 		data() {
 			return {
         miniVariant: false,
