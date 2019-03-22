@@ -12,9 +12,20 @@
 <script>
 	export default {
 		name: '',
+		props: ["search"],
+		computed: {
+			searchText: {
+				get() {
+					return this.search;
+				},
+				set(val) {
+					this.$emit("update:search", val);
+				}
+			}
+		},
 		data() {
 			return {
-        searchText: '',
+        /* searchText: '', */
 			}
 		},
 		methods: {
