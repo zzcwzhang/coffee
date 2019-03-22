@@ -19,7 +19,9 @@
           <v-list-tile-title v-text="item.title" />
         </v-list-tile-content>
       </v-list-tile>
+		<v-treeview class="ml-4" :items="tree"></v-treeview>
     </v-list>
+
   </v-navigation-drawer>
 </template>
 
@@ -41,6 +43,24 @@
 			return {
         miniVariant: false,
         clipped: false,
+				tree: [
+					{
+						id: 1,
+						name: '女鞋',
+						children: [
+							{ id: 2, name: '草鞋' },
+							{ id: 3, name: '皮靴' },
+						]
+					},
+					{
+						id: 100,
+						name: '包',
+						children: [
+							{ id: 102, name: '背包' },
+							{ id: 103, name: '挎包' },
+						]
+					},
+				],
         items: [{
             icon: 'icon-coffee',
             title: '咖啡',

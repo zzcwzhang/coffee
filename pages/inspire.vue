@@ -8,19 +8,26 @@
         <v-container>
           <v-layout wrap row>
             <v-flex text-xs-center sx12 sm6 v-for="item in items" :key="item.headlineText">
-              <v-card class="ma-2" :height="580">
-                <v-img class="py-4" :src="item.image" aspect-ratio="1"></v-img>
-                <v-card-title primary-title>
-                  <div>
-                    <h3 class="headline mb-0">{{item.headlineText}}</h3>
-                    <div> {{ item.mainText }} </div>
-                  </div>
-                </v-card-title>
-
-                <v-card-actions>
-                  <v-btn flat color="orange">购买</v-btn>
-                  <v-btn flat color="orange">详情</v-btn>
-                </v-card-actions>
+              <v-card class="ma-2">
+                <v-layout column justify-space-between>
+                  <v-flex>
+                    <v-img class="py-4" :src="item.image" aspect-ratio="1" ></v-img>
+                  </v-flex>
+                  <v-flex>
+                    <v-card-title primary-title>
+                      <div style="height:100px">
+                        <h3 class="headline mb-0">{{item.headlineText}}</h3>
+                        <div> {{ item.mainText }} </div>
+                      </div>
+                    </v-card-title>
+                  </v-flex>
+                  <v-flex>
+                    <v-card-actions>
+                      <v-btn flat color="orange">购买</v-btn>
+                      <v-btn flat color="orange">详情</v-btn>
+                    </v-card-actions>
+                  </v-flex>
+                </v-layout>
               </v-card>
             </v-flex>
           </v-layout>
