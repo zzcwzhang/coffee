@@ -26,9 +26,11 @@
 <script>
   export default {
     name: '',
-		props: ['drawer', 'miniVariant', 'clipped'],
+		props: ['drawer'],
 		data() {
 			return {
+        miniVariant: false,
+        clipped: false,
         items: [{
             icon: 'icon-coffee',
             title: '咖啡',
