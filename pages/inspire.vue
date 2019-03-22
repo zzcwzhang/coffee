@@ -6,10 +6,10 @@
     <my-nav :drawer.sync="drawer">
       <</my-nav> <!-- 内容区域 -->
         <v-container>
-          <v-layout class="pa-10">
-            <v-flex text-xs-center v-for="item in items">
-              <v-card class="ma-10" :max-width="300">
-                <v-img class="py-4" :src="item.image" aspect-ratio="1" :max-height="268" :max-width="296"></v-img>
+          <v-layout wrap row>
+            <v-flex text-xs-center sx12 sm6 v-for="item in items">
+              <v-card class="ma-2">
+                <v-img class="py-4" :src="item.image" aspect-ratio="1"></v-img>
                 <v-card-title primary-title>
                   <div>
                     <h3 class="headline mb-0">{{item.headlineText}}</h3>
